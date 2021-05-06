@@ -1,3 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+.nav {
+  position: fixed;
+  background-color: teal;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#paragraphs {
+  padding-top: 20px;
+}
+
 /* * {
   margin: 0;
 } */
@@ -5,8 +21,19 @@ h2 {
   /* text-align: center; */
   color: red;
 }
-.red_border {
+.outter_container {
+  width: 100vw;
+  overflow-x: scroll;
+}
+.para_container {
+  display: flex;
+  width: fit-content;
+  justify-content: start;
+}
+p {
   border: 2px solid red;
+  width: 100px;
+  margin-right: 20px;
 }
 
 #upper_alpha {
@@ -31,4 +58,19 @@ h2 {
 ul,
 ol {
   list-style-position: inside;
+}
+@media screen and (max-width: 450px) {
+  .nav {
+    flex-direction: column;
+  }
+  #paragraphs {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .para_container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
